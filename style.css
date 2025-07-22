@@ -133,6 +133,8 @@ body {
   text-shadow: 0 2px 8px #fff;
   margin-top: 24px;
   z-index: 2;
+  text-align: center;
+  width: 100%;
 }
 #mobile-controls {
   position: fixed;
@@ -199,23 +201,23 @@ body {
   #score { font-size: 1rem; padding: 8px 16px; }
   #birthday-message { font-size: 1.4rem; }
   .control-btn { 
-    width: 70px; 
-    height: 70px; 
-    font-size: 1.8rem;
+    width: 50px; 
+    height: 50px; 
+    font-size: 1.2rem;
     box-shadow: 
-      0 0 0 3px #fff,
-      0 0 0 6px #333,
-      3px 3px 0 6px #000,
-      6px 6px 0 3px rgba(0,0,0,0.5);
+      0 0 0 2px #fff,
+      0 0 0 4px #333,
+      2px 2px 0 4px #000,
+      4px 4px 0 2px rgba(0,0,0,0.5);
   }
   .control-btn:active {
     box-shadow: 
-      0 0 0 3px #fff,
-      0 0 0 6px #333,
-      2px 2px 0 6px #000,
-      4px 4px 0 3px rgba(0,0,0,0.5);
+      0 0 0 2px #fff,
+      0 0 0 4px #333,
+      1px 1px 0 4px #000,
+      2px 2px 0 2px rgba(0,0,0,0.5);
   }
-  #mobile-controls { gap: 60px; bottom: 30px; }
+  #mobile-controls { gap: 40px; bottom: 20px; }
 }
 
 @media (max-width: 375px) {
