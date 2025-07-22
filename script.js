@@ -11,9 +11,9 @@ const leftBtn = document.getElementById('left-btn');
 const rightBtn = document.getElementById('right-btn');
 
 const photos = [
-  '../photos/photo1.jpg',
-  '../photos/photo2.jpg',
-  '../photos/photo3.jpg'
+  'photos/photo1.jpg',
+  'photos/photo2.jpg',
+  'photos/photo3.jpg'
 ];
 let photoIndex = 0;
 let score = 0;
