@@ -4,7 +4,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Press Start 2P', monospace;
-  background: url('../pixel-bg.png') repeat;
+  background: url('pixel-bg.png') repeat;
   background-size: cover;
   min-height: 100vh;
 }
@@ -34,7 +34,7 @@ body {
   width: 64px;
   height: 64px;
   margin-bottom: 32px;
-  background: url('../character.png') center/cover no-repeat;
+  background: url('character.png') center/cover no-repeat;
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.10);
   border: 2px solid #f7b2d9;
@@ -43,7 +43,7 @@ body {
   position: absolute;
   width: 48px;
   height: 48px;
-  background: url('../heart.png') center/cover no-repeat;
+  background: url('heart.png') center/cover no-repeat;
   animation: fall 2.5s linear forwards;
   cursor: pointer;
   z-index: 20;
