@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>Kalp-Yakalama</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="start-screen">
+    <div id="title">Kalp-Yakalama</div>
+    <div id="description">Yukarıdan düşen kalpleri topla</div>
+    <button id="play-button">OYNA</button>
+  </div>
+  <div id="game-container" style="display:none;">
+    <div id="score">Toplanan Kalp: <span id="score-count">0</span>/5</div>
+    <div id="character"></div>
+    <div id="mobile-controls">
+      <button id="left-btn" class="control-btn">◀</button>
+      <button id="right-btn" class="control-btn">▶</button>
+    </div>
+    <!-- Kalpler burada olacak -->
+  </div>
+  <div id="end-screen" style="display:none;">
+    <div id="heart-animation"></div>
+    <div id="photo-slideshow">
+      <img id="slideshow-img" src="../photos/photo1.jpg" alt="Anı Fotoğrafı">
+    </div>
+    <div id="birthday-message">İyi ki doğdun aşkım! ❤️</div>
+  </div>
+  <audio id="collect-sound" src="../sounds/pop.mp3" preload="auto"></audio>
+  <script src="script.js"></script>
+</body>
+</html> 

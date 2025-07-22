@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Press Start 2P', monospace;
+  background: url('../pixel-bg.png') repeat;
+  background-size: cover;
+  min-height: 100vh;
+}
+#game-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+#score {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(255,255,255,0.8);
+  padding: 10px 24px;
+  border-radius: 24px;
+  font-size: 1.2rem;
+  z-index: 10;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+#character {
+  width: 64px;
+  height: 64px;
+  margin-bottom: 32px;
+  background: url('../character.png') center/cover no-repeat;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  border: 2px solid #f7b2d9;
+}
+.heart {
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  background: url('../heart.png') center/cover no-repeat;
+  animation: fall 2.5s linear forwards;
+  cursor: pointer;
+  z-index: 20;
+}
+
+#end-screen {
+  position: fixed;
+  top: 0; left: 0; width: 100vw; height: 100vh;
+  background: rgba(255, 192, 203, 0.95);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+#heart-animation {
+  position: absolute;
+  top: 0; left: 0; width: 100vw; height: 100vh;
+  pointer-events: none;
+}
+#photo-slideshow {
+  position: relative;
+  z-index: 2;
+  margin-bottom: 24px;
+}
+#start-screen {
+  position: fixed;
+  top: 0; left: 0; width: 100vw; height: 100vh;
+  background: #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 200;
+}
+
+#title {
+  font-size: 3rem;
+  color: #fff;
+  margin-bottom: 2rem;
+  text-align: center;
+  text-shadow: 2px 2px 0px #ff1493;
+}
+
+#description {
+  font-size: 1rem;
+  color: #fff;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+#play-button {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 1.2rem;
+  background: #ff1493;
+  color: #fff;
+  border: 4px solid #fff;
+  padding: 1rem 2rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+#play-button:hover {
+  background: #fff;
+  color: #ff1493;
+  border-color: #ff1493;
+}
+
+#slideshow-img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+  margin-bottom: 12px;
+}
+#slideshow-caption {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #b8005c;
+  margin-bottom: 12px;
+}
+#birthday-message {
+  font-size: 2rem;
+  color: #b8005c;
+  font-weight: bold;
+  text-shadow: 0 2px 8px #fff;
+  margin-top: 24px;
+  z-index: 2;
+}
+#mobile-controls {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 40px;
+  z-index: 50;
+}
+
+.control-btn {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(145deg, #ff4081, #e91e63);
+  border: none;
+  border-radius: 0;
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  user-select: none;
+  touch-action: manipulation;
+  transition: none;
+  position: relative;
+  image-rendering: pixelated;
+  
+  /* Pixel art border effect */
+  box-shadow: 
+    0 0 0 2px #fff,
+    0 0 0 4px #333,
+    2px 2px 0 4px #000,
+    4px 4px 0 2px rgba(0,0,0,0.5);
+}
+
+.control-btn:before {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  right: 2px;
+  height: 40%;
+  background: linear-gradient(180deg, rgba(255,255,255,0.3), transparent);
+  pointer-events: none;
+}
+
+.control-btn:active {
+  background: linear-gradient(145deg, #e91e63, #c2185b);
+  transform: translate(1px, 1px);
+  box-shadow: 
+    0 0 0 2px #fff,
+    0 0 0 4px #333,
+    1px 1px 0 4px #000,
+    2px 2px 0 2px rgba(0,0,0,0.5);
+}
+
+@media (max-width: 600px) {
+  #character { width: 48px; height: 48px; }
+  .heart { width: 36px; height: 36px; }
+  #title { font-size: 1.8rem; }
+  #description { font-size: 0.9rem; }
+  #play-button { font-size: 1rem; padding: 0.8rem 1.5rem; }
+  #slideshow-img { width: 120px; height: 120px; }
+  #score { font-size: 1rem; padding: 8px 16px; }
+  #birthday-message { font-size: 1.4rem; }
+  .control-btn { 
+    width: 70px; 
+    height: 70px; 
+    font-size: 1.8rem;
+    box-shadow: 
+      0 0 0 3px #fff,
+      0 0 0 6px #333,
+      3px 3px 0 6px #000,
+      6px 6px 0 3px rgba(0,0,0,0.5);
+  }
+  .control-btn:active {
+    box-shadow: 
+      0 0 0 3px #fff,
+      0 0 0 6px #333,
+      2px 2px 0 6px #000,
+      4px 4px 0 3px rgba(0,0,0,0.5);
+  }
+  #mobile-controls { gap: 60px; bottom: 30px; }
+}
+
+@media (max-width: 375px) {
+  #title { font-size: 1.5rem; }
+  #description { font-size: 0.8rem; }
+  #slideshow-img { width: 100px; height: 100px; }
+  #birthday-message { font-size: 1.2rem; }
+} 
